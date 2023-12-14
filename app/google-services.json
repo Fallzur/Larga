@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "147349929908",
+    "project_id": "larga-a4bd2",
+    "storage_bucket": "larga-a4bd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147349929908:android:c282a0e68393a5f61e3ce1",
+        "android_client_info": {
+          "package_name": "com.example.larga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwfX44GEpRwjxdlSJ3YlGd_cYOezVifw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

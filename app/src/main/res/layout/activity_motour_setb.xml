@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Motour_SETB">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_setb"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-5dp"
+        android:layout_above="@+id/LocationNav_setB"
+        />
+
+
+    <ImageView
+        android:id="@+id/img1_setB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setB"
+        android:layout_marginBottom="-15dp"
+        android:src="@drawable/church"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/img2_setB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setB"
+        android:layout_marginBottom="-15dp"
+        android:src="@drawable/boat"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/img3_setB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setB"
+        android:layout_marginBottom="-15dp"
+        android:src="@drawable/wine"
+        android:visibility="invisible" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/LocationNav_setB"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/RL_total_setB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/spotb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Your Destinations"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:id="@+id/TV_total_setB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip A - "
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_toStartOf="@id/TV_total_setB"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/buttons_setB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="1">
+
+                <!-- Button 1 -->
+                <Button
+                    android:id="@+id/loc_1_setB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="location 1" />
+
+                <!-- Button 2 -->
+                <Button
+                    android:id="@+id/loc_2_setB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="location 2" />
+
+                <!-- Button 3 -->
+                <Button
+                    android:id="@+id/loc_3_setB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="location 3" />
+
+            </GridLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/View_buttons_setB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="1">
+
+                <!-- Button 1 -->
+                <Button
+                    android:id="@+id/view_loc_1_setB"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:backgroundTint="#007AFF"
+                    android:textColor="@color/white"
+                    android:text="View"
+                    android:visibility="invisible"
+                    android:clickable="false"/>
+
+                <!-- Button 2 -->
+                <Button
+                    android:id="@+id/view_loc_2_setB"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#007AFF"
+                    android:textColor="@color/white"
+                    android:text="View"
+                    android:visibility="invisible"
+                    android:clickable="false"/>
+
+                <!-- Button 3 -->
+                <Button
+                    android:id="@+id/view_loc_3_setB"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:backgroundTint="#007AFF"
+                    android:textColor="@color/white"
+                    android:text="View"
+                    android:visibility="invisible"
+                    android:clickable="false"/>
+
+            </GridLayout>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/Start_setB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"
+            android:text="Start Your Tour"/>
+
+        <TextView
+            android:id="@+id/trlatB"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/trlonB"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trlatB"
+            />
+        <TextView
+            android:id="@+id/traddB"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trlonB"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/findingNav_setB"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/ContactingDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Searching driver....."
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/trloading_setB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/loading1" />
+
+        <Button
+            android:id="@+id/tr_cancel_setB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF0000"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

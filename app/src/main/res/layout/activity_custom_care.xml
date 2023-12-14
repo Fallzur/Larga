@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/panelbackground"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/panelbackground" />
+
+    <GridLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="3"
+        android:layout_marginTop="60dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/fb1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:contentDescription="Column 1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fb1" />
+        <ImageView
+            android:id="@+id/gmail1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/gm1"
+            android:layout_margin="10dp"
+            android:contentDescription="Column 2"
+            android:scaleType="fitCenter"
+            />
+        <ImageView
+            android:id="@+id/ig1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/ig1"
+            android:layout_margin="10dp"
+            android:contentDescription="Column 3"
+            android:scaleType="fitCenter"
+            />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewcust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to Customer Care"
+        android:textColor="#FF7222"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewcust1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1.2in"
+        android:text="Contact Us:"
+        android:textStyle="bold"
+        android:textColor="#FF7222"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewcust2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1.5in"
+        android:text="AppLarga@facebook.com"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewcust3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1.7in"
+        android:text="Larga.app@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/textViewcust4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1.9in"
+        android:text=":@LargaAPP/Instagram"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/textViewcust5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2.1in"
+        android:text="09123456789"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewcust6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/backgroundImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3in"
+        android:layout_marginBottom="1dp"
+        android:text="Questions or concerns? Contact us by the email above:. We're here to assist you!"
+        android:textColor="#92FFFFFF"
+        android:textSize="12sp" />
+    <!-- You can add more UI components as needed -->
+
+</RelativeLayout>

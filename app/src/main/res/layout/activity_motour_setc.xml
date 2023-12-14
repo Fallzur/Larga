@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Motour_SETC">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_setc"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-15dp"
+        android:layout_above="@+id/LocationNav_setC"
+        />
+
+
+    <ImageView
+        android:id="@+id/img1_setC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setC"
+        android:layout_marginBottom="-15dp"/>
+    <ImageView
+        android:id="@+id/img2_setC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setC"
+        android:layout_marginBottom="-15dp"/>
+    <ImageView
+        android:id="@+id/img3_setC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LocationNav_setC"
+        android:layout_marginBottom="-15dp"/>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/LocationNav_setC"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/RL_total_setC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Your Destinations"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:id="@+id/TV_total_setC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip B - "
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_toStartOf="@id/TV_total_setC"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/buttons_setC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <!-- Button 1 -->
+                <Button
+                    android:id="@+id/loc_1_setC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="location 1" />
+
+                <!-- Button 2 -->
+                <Button
+                    android:id="@+id/loc_2_setC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="location 2" />
+
+                <!-- Button 3 -->
+                <Button
+                    android:id="@+id/loc_3_setC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="location 3" />
+            </GridLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/Start_setC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"
+            android:text="Start Your Tour"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

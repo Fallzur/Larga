@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="103dp"
+    android:background="#24242B"
+    android:paddingBottom="2dp">
+
+        <RelativeLayout
+            android:id="@+id/nameHolder"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#32323D"
+            android:padding="10dp">
+<ImageView
+    android:id="@+id/personimg"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/favlog"
+    android:layout_marginEnd="15dp">
+</ImageView>
+            <TextView
+                android:id="@+id/ridestatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request"
+                android:layout_below="@+id/personimg"
+                android:textColor="#FF7222"
+                android:textStyle="bold"
+                android:textSize="14dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/personimg"
+                android:layout_marginStart="40dp">
+                <TextView
+                    android:id="@+id/ridename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:id="@+id/rideaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ridename"
+                    android:text="address"
+                    android:textColor="#33b555"></TextView>
+                <TextView
+                    android:id="@+id/ridecontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rideaddress"
+                    android:text="contac"
+                    android:textColor="#33b555"></TextView>
+
+
+               <ImageView
+                   android:id="@+id/rideView"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="10dp"
+                   android:src="@drawable/arrowrights"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>

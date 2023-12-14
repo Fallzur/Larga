@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapPahatid">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/usermap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/usernavigation1"
+        android:layout_marginBottom="-5dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/usernavigation1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_radius"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/userTittle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="LARGA"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="normal"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/userrelative1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/userTittle1"
+            android:background="#F5F67708"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/userimg1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/usertext01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/userimg1"
+                android:text="Choose you desired "
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usertext01"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/userimg1"
+                android:text="Destination"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userrelative1"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/userpickuplocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:drawableLeft="@drawable/location"
+                android:hint="pick up location"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#5C5757"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Second EditText with an icon on the start -->
+            <AutoCompleteTextView
+                android:id="@+id/userwhereTogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userpickuplocation"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittextbackground"
+                android:drawableLeft="@drawable/location2"
+                android:hint="Where you go"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#5C5757"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/ordinaryCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userwhereTogo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FF0000"
+                android:text="cancel"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/userdone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userwhereTogo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="60dp"
+                android:backgroundTint="#F5F67708"
+                android:text="Confirm"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/userlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="lat"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/userlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/userlat"
+            android:text="lat"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/useradd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/userlon"
+            android:text="lat"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/usernavigation2"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_radius"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/userTittle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="LARGA"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/userrelative2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/userTittle2"
+            android:background="#F5F67708"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/userimg2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/usertvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/userimg2"
+                android:text="Your ride location"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/userlocationa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usertvLocation"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/userimg2"
+                android:text="Dlocation a"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/usertvtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="total"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/userlocationb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usertvLocation"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="location b"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/userRL_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userrelative2"
+            android:background="#405EB8">
+
+            <Button
+                android:id="@+id/userpaymentbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_button_background"
+                android:backgroundTint="#00F4F4F4"
+                android:foreground="@drawable/ripple_rounded"
+                android:text=" "
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/userimgwallet"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/wallet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/userimgwallet"
+                android:text="pament method"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/usertvmethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:text="method"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userRL_method"
+            android:layout_marginTop="90dp">
+
+
+            <Button
+                android:id="@+id/userconfirmbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#FF7222"
+                android:text="confirm"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/usernavigation3"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_radius"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:id="@+id/userTittle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="LARGA"
+            android:textColor="@color/white"
+            android:textSize="15dp"></TextView>
+
+
+        <RelativeLayout
+            android:id="@+id/userrelative3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/userTittle3"
+            android:background="#F5F67708"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/userimg3"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/usertext_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/userimg3"
+                android:text="Rider has pick you up"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/usertext_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usertext_01"
+                android:layout_toEndOf="@+id/userimg3"
+                android:text="Your rider will call as soon as possible"
+                android:textColor="@color/white"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/usertext03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usertext_02"
+                android:layout_toEndOf="@+id/userimg3"
+                android:text="Please be patient, Thank you"
+                android:textColor="@color/white"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/userrelative_03"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/userrelative3"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/userD_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/personsback" />
+
+            <TextView
+                android:id="@+id/userDriver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/userD_img2"
+                android:text="Rider name"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/userDriver_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userDriver_name"
+                android:layout_toEndOf="@+id/userD_img2"
+                android:text="Number"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <ImageView
+                android:id="@+id/asterking"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="127dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/asterk" />
+
+            <ImageView
+                android:id="@+id/useradd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/useradded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/star_outline1"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/useradd"
+                android:text="Click to Favorite"
+                android:textColor="@color/white"
+                android:textSize="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/usermotorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:text="motor type"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/usermotorTV"
+                android:src="@drawable/motologs" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/userrelative04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userrelative_03"
+            android:background="#F5F67708"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/userL_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/userL_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/userL_img2"
+                android:text="Pick up"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/userlocationa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userL_text01"
+                android:layout_toEndOf="@+id/userL_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <ImageView
+                android:id="@+id/userL1_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="220dp"
+                android:src="@drawable/location2" />
+
+            <TextView
+                android:id="@+id/userL1_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/userL1_img2"
+                android:text="Destination"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/userlocationb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userL1_text01"
+                android:layout_toEndOf="@+id/userL1_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/userarrive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userrelative04"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF7222"
+            android:text="arrived"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/usernavigation4"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_radius"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:id="@+id/userTittle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="LARGA"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/userrelative4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/userTittle4"
+            android:background="#F5F67708"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/userimg4"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/ContactingYourDriver1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="Searching your rider...."
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/userloading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/userrelative4"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp" />
+
+        <Button
+            android:id="@+id/userfindingcancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#F5FF0000"
+            android:text="cancel"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/papalit_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_radius"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:id="@+id/papalit_Tittle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="LARGA"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/papalit_relative1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/papalit_Tittle1"
+            android:background="#33b555"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/papalit_img1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/papalit_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/papalit_img1"
+                android:text="Want us to buy for "
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/papalit_text01"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/papalit_img1"
+                android:text="you?"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/papalit_relative1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/papalit_editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:drawableLeft="@drawable/location"
+                android:hint="Location Disabled"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#5C5757"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Second EditText with an icon on the start -->
+            <EditText
+                android:id="@+id/papalit_editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/papalit_editText1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittextbackground"
+                android:drawableLeft="@drawable/location2"
+                android:hint="where to buy?"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#5C5757"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <EditText
+                android:id="@+id/papalit_editText3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/papalit_editText2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittextbackground"
+                android:drawableLeft="@drawable/cart"
+                android:hint="What would you want us to buy?"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#5C5757"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/papalit_canceTransuction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="60dp"
+                android:backgroundTint="#FF0000"
+                android:text="CANCEL"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/papalit_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="60dp"
+                android:backgroundTint="#33b555"
+                android:text="confirm"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

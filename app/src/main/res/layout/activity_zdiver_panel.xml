@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Z_DIVER_PANEL">
+
+
+    <RelativeLayout
+        android:id="@+id/driverToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF7222"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:backgroundTint="#FF7222"
+            android:background="@drawable/pesoback"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/online_offline"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cercle" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/online_offline"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:text="Make Me =" />
+
+        <TextView
+            android:id="@+id/offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="offline"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#F60202"
+            android:visibility="invisible"
+            android:layout_marginRight="22dp"/>
+        <TextView
+            android:id="@+id/onine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="online"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#60FF00"
+            android:layout_marginRight="22dp"
+           />
+
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/DRIVERMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/DRIVERnavigationButtom"
+        android:layout_below="@+id/driverToolbar"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVERnavigationButtom"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#1D1D25"
+        >
+        <RelativeLayout
+            android:id="@+id/relative01"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FF7222"/>
+
+
+
+
+
+        <GridLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_home"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/homes1"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_map"
+                    android:layout_width="76dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/nrbby"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIDE REQUEST"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_history"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/histortry"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIDE HISTORY"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+        </GridLayout>
+
+    </RelativeLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/DRIVERnavigationButtom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="360dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="-30dp">
+        <ImageView
+            android:id="@+id/DriverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/personsback"
+            android:scaleType="centerCrop"
+            android:background="@drawable/personback" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameOfDirver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:layout_below="@+id/card1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_btn_bck"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:backgroundTint="#F6F2F2"
+        android:layout_marginTop="8dp"/>
+
+
+</RelativeLayout>

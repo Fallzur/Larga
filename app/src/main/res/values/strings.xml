@@ -1,0 +1,32 @@
+<resources>
+
+    <string-array name="vehicle_types">
+        <item>Select a Vehicle Type</item> <!-- Disabled item -->
+        <item>NMAX</item>
+        <item>EAROX</item>
+        <item>ADV</item>
+        <!-- Add more vehicle types as needed -->
+    </string-array>
+
+
+    <string-array name="usertype">
+        <item>Select  Type of User</item>
+        <item>Drivers</item>
+        <item>User</item>
+        <!-- Add more vehicle types as needed -->
+    </string-array>
+
+
+    <string name="title_activity_map_location">MapLocation</string>
+    <string name="app_name">larga\n</string>
+    <string name="title_activity_choose_map">ChooseMap</string>
+    <string name="title_activity_zdiver_panel">Z_DIVER_PANEL</string>
+    <string name="title_activity_zview_request">Z_VIEW_REQUEST</string>
+    <string name="title_activity_motour_seta">Motour_SETA</string>
+    <string name="title_activity_motour_setb">Motour_SETB</string>
+    <string name="title_activity_motour_setc">Motour_SETC</string>
+    <string name="title_activity_map_pahatid">MapPahatid</string>
+    <string name="title_activity_user_driver_view_history">USER_DRIVER_VIEW_HISTORY</string>
+</resources>
+
+

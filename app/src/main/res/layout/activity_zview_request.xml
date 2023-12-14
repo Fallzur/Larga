@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Z_VIEW_REQUEST">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/z_requestmap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LISTnavigationButtom"
+        />
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/LISTnavigationButtom"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/driverTittle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="PASUNDO"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginEnd="10dp"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/relative4"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/driverTittle2"
+            android:layout_height="70dp"
+            android:background="#FF7222"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/imge3"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/texte01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@+id/imge3"
+                android:text="Start to accept User Request"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/riderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/relative4"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:text="User total payment:"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/totalcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text01"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="75dp"
+                android:layout_marginBottom="20dp"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="15dp"></TextView>
+
+            <ImageView
+                android:id="@+id/D_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/personsback" />
+
+            <TextView
+                android:id="@+id/D_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/D_img2"
+                android:text="Rider name"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/D_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/D_name"
+                android:layout_toEndOf="@+id/D_img2"
+                android:text="Number"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative04"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/riderDetails"
+            android:layout_height="wrap_content"
+            android:background="#FF7222"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/L_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/L_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/L_img2"
+                android:text="Pick Up"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/L_locationA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/L_text01"
+                android:layout_toEndOf="@+id/L_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+
+
+
+            <ImageView
+                android:id="@+id/L1_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location2"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@id/L_img2"
+                />
+
+            <TextView
+                android:id="@+id/L1_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/L_img2"
+                android:layout_toEndOf="@+id/L1_img2"
+                android:text="Destination"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/L1_locationB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/L1_text01"
+                android:layout_toEndOf="@+id/L1_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/RL_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/L1_locationB"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="20dp"
+              >
+                <TextView
+                    android:id="@+id/TVinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Papalit Information"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"></TextView>
+                <TextView
+                   android:id="@+id/InformationOfPapalit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TVinfo"
+                    android:layout_centerHorizontal="true"
+                    android:text="Papalit Information"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    tools:ignore="TextSizeCheck"></TextView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F5EF0D0D"
+            android:text="CANCEL"
+            android:textColor="@color/white" />
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/accept_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#33b555"
+            android:text="accept"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"/>
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/motour_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#33b555"
+            android:text="accept"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"/>
+
+
+
+
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/arrive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF7222"
+            android:text="arrive"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+
+
+
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/cancelTripe_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F5EF0D0D"
+            android:text="Cancel Trip"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/startTrip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#33b555"
+            android:text="Start trip"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"/>
+
+
+
+
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#33b555"
+            android:text="finish trip"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+
+
+        <Button
+            android:layout_below="@+id/relative04"
+            android:id="@+id/cashRecieve_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#33b555"
+            android:text="Cash Received"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

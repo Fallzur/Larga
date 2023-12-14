@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#32323D"
+    android:layout_height="match_parent"
+    tools:context=".Z_DRIVER_HISTORY">
+
+
+
+    <RelativeLayout
+        android:id="@+id/driverHistoryToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF7222"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:text="Ride History"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVER_RelativeSearch_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/driverHistoryToolbar"
+        android:background="#2B2B35"
+        android:foreground="@drawable/ripple_rounded"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/searchimg"
+            android:background="@drawable/main_btn_bck"
+            android:contentDescription="Column 1"
+            android:scaleType="fitCenter"
+            />
+        <RelativeLayout
+            android:id="@+id/texsearh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img1"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASUNDO"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:text="Pick up and deliver"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVER_RelativeMotor_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DRIVER_RelativeSearch_ic"
+        android:background="#901D1D25"
+        android:foreground="@drawable/ripple_rounded"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/psundo"
+            android:background="@drawable/main_btn_bck"
+            android:contentDescription="Column 1"
+            android:scaleType="fitCenter"
+            />
+        <RelativeLayout
+            android:id="@+id/textMotor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img2"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PILIAN"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text3"
+                android:text="Pick up and deliver"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVER_RelativeFlag_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DRIVER_RelativeMotor_ic"
+        android:background="#2B2B35"
+        android:foreground="@drawable/ripple_rounded"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/mtoursc"
+            android:background="@drawable/main_btn_bck"
+            android:contentDescription="Column 1"
+            android:scaleType="fitCenter"
+            />
+        <RelativeLayout
+            android:id="@+id/textFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img3"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTOUR"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text5"
+                android:text="Pick up and deliver"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVER_RelativeCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DRIVER_RelativeFlag_ic"
+        android:background="#901D1D25"
+        android:foreground="@drawable/ripple_rounded"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/pplit"
+            android:background="@drawable/main_btn_bck"
+            android:contentDescription="Column 1"
+            android:scaleType="fitCenter"
+            />
+        <RelativeLayout
+            android:id="@+id/textcart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img4"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAPALIT"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text7"
+                android:text="Pick up and deliver"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/DRIVERnavigationButtom"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#1D1D25"
+        >
+        <RelativeLayout
+            android:id="@+id/relative01"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FF7222"/>
+
+
+
+        <GridLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_home1"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/homes1"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt1tt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_map1"
+                    android:layout_width="76dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/nrbby"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt3tt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIDE REQUEST"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/driver_history1"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/histortry"
+                    android:background="@drawable/main_btn_bck"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Column 1"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/txt4tt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIDE HISTORY"
+                    android:textColor="#C4FFFFFF"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/DRIVERnavigationButtom"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="360dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="-30dp">
+        <ImageView
+            android:id="@+id/UserImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/historys1"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#32323D"
+            android:background="@drawable/personback" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/Hisotry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ride History"
+        android:layout_below="@+id/card1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_btn_bck"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:backgroundTint="#F6F2F2"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Z_DRIVER_PROFILE"
+    android:backgroundTint="#32323D"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/driverprofileback"
+        android:padding="30dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/personProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="45dp"
+            app:cardCornerRadius="360dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
+            <ImageView
+                android:id="@+id/UserImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/personsback"
+                android:scaleType="centerCrop"
+                android:background="@drawable/personback" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personProfile"
+            android:layout_centerHorizontal="true"
+            android:text="person name"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driver"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/driverradius"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textTittel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Total Rides"
+            android:textColor="#F5F67708"
+            android:textStyle="bold"/>
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/textTittel"
+           android:layout_marginTop="20dp"
+           android:layout_toStartOf="@+id/center"
+           android:layout_marginEnd="20dp">
+           <TextView
+               android:id="@+id/countAccept"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0"
+               android:textStyle="bold"
+               android:textColor="@color/white"
+               android:layout_centerHorizontal="true"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/countAccept"
+               android:text="Acceptence"
+               android:textColor="@color/white"
+               android:textStyle="bold"/>
+       </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTittel"
+            android:layout_marginTop="20dp"
+           android:layout_toEndOf="@+id/center"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/countCancelation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countCancelation"
+                android:text="Cancelation"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/Ride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_tittle"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/driverradius"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/center1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Total Earnings"
+            android:textColor="#F5F67708"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textride"
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@+id/center1"
+            android:layout_marginEnd="20dp">
+            <TextView
+                android:id="@+id/countEarnings"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:background="#B38E56"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countEarnings"
+                android:text="Earnings"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textride"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/center1"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/countTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:background="#B38E56"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countTrip"
+                android:text="Trip"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Ride"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="LOG OUT"
+        android:textColor="@color/white"
+        android:foreground="@drawable/ripple_rounded"
+        android:backgroundTint="#FF7222"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/panelbackground"
+    android:padding="20dp"
+    tools:context=".USER_PANEL">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/panelbackground" />
+
+    <GridLayout
+        android:id="@+id/User_buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/main_btn_bck"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <!-- HOME -->
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onHomeButtonClick"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/homyas"
+                android:layout_gravity="center"
+                android:contentDescription="Home Icon"/>
+
+            <TextView
+                android:id="@+id/btn_home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- FAVORITE -->
+        <Button
+            android:id="@+id/btn_favorate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onFavoriteButtonClick"
+            android:visibility="visible"
+            />
+
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/favort"
+                android:layout_gravity="center"
+                android:contentDescription="Favorite Icon"/>
+
+            <TextView
+                android:id="@+id/btn_favorate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAVORITE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- HISTORY -->
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onHomeButtonClick"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/histortry"
+                android:layout_gravity="center"
+                android:contentDescription="History Icon"/>
+
+            <TextView
+                android:id="@+id/btn_history_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HISTORY"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </GridLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/User_Information"
+        android:layout_width="wrap_content"
+        android:layout_height="178dp"
+        android:layout_below="@id/buttonsAndText"
+
+        android:background="@drawable/information_back"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/infoImageView"
+            android:layout_width="342dp"
+            android:layout_height="133dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/infoback" />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Information"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:text="Loading........."
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="3dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/info_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_name"
+            android:text="Loading........."
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="3dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/info_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_contact"
+            android:text="Loading........."
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/text1"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/LogOut"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/whitebtn"
+            android:padding="3dp"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textColor="#FF7222"
+            android:textStyle="bold"
+            android:foreground="@drawable/ripple_rounded"
+            android:gravity="center"
+        />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    <GridLayout
+        android:id="@+id/buttonsAndText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/User_buttonPanel"
+        android:rowCount="2"
+        android:layout_marginBottom="60dp"
+        android:columnCount="3"
+        android:layout_marginTop="25dp"
+        android:padding="10dp">
+
+        <!-- Row 1, Column 1: ImageView + TextView -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/searchimg"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 1"
+                android:foreground="@drawable/ripple_rounded"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASUNDO"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <!-- Row 1, Column 2: ImageView + TextView -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/psundo"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 2"
+                android:foreground="@drawable/ripple_rounded"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PILIAN"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/mtoursc"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 3"
+                android:foreground="@drawable/ripple_rounded"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOTOUR"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <!-- Row 1, Column 4: ImageView + TextView -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pplit"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 4"
+                android:foreground="@drawable/ripple_rounded"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAPALIT"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <!-- Row 2, Column 1: ImageView + TextView -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn5"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/premo"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 1"
+                android:foreground="@drawable/ripple_rounded"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROMO"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <!-- Row 2, Column 2: ImageView + TextView -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn6"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/supp"
+                android:background="@drawable/main_btn_bck"
+                android:layout_margin="10dp"
+                android:contentDescription="Column 2"
+                android:foreground="@drawable/ripple_rounded"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVICES"
+                android:textColor="#C4FFFFFF"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+
+    </GridLayout>
+
+
+
+
+
+</RelativeLayout>

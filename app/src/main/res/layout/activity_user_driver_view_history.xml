@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".USER_DRIVER_VIEW_HISTORY">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewHistoryNav"
+        />
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/viewHistoryNav"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/bottom_radius"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/historyTittle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="PASUNDO"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/historyrelative4"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/historyTittle2"
+            android:layout_height="70dp"
+            android:background="#FF7222"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/hisimg2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/largaloglog"></ImageView>
+
+            <TextView
+                android:id="@+id/histext01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hisimg2"
+                android:text="HISTORY"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"></TextView>
+            <TextView
+                android:id="@+id/histotalcost"
+                android:layout_below="@+id/histext01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hisimg2"
+                android:text="Total"
+                android:textColor="@color/white"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hisDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/historyrelative4"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/his_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/personsback"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/his_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/his_img2"
+                android:text="Rider name"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+            <TextView
+                android:id="@+id/his_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/his_name"
+                android:layout_toEndOf="@+id/his_img2"
+                android:text="09154147063"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck"></TextView>
+            <ImageView
+                android:id="@+id/asterkhist"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/asterk" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative04"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/hisDetails"
+            android:layout_height="1850dp"
+            android:background="#FF7222"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/L_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/L_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/L_img2"
+                android:text="PICK UP"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"
+                android:layout_marginTop="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/his_locationA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/L_text01"
+                android:layout_toEndOf="@+id/L_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+
+
+
+            <ImageView
+                android:id="@+id/L1_img2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location2"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@id/L_img2"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/his1_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/L_img2"
+                android:layout_toEndOf="@+id/L1_img2"
+                android:text="DESTINATION"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"
+                android:layout_marginTop="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/his1_locationB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/his1_text01"
+                android:layout_toEndOf="@+id/L1_img2"
+                android:text="Location Information details"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                tools:ignore="TextSizeCheck"></TextView>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/history_RL_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/his1_locationB"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                >
+                <TextView
+                    android:id="@+id/TVinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Papalit Information"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"></TextView>
+                <TextView
+                    android:id="@+id/his_InformationOfPapalit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TVinfo"
+                    android:layout_centerHorizontal="true"
+                    android:text="Papalit Information"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="TextSizeCheck"></TextView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

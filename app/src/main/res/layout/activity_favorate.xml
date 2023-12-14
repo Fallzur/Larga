@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/panelbackground"
+    android:padding="20dp"
+    tools:context=".Favorate">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/panelbackground" />
+
+    <GridLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/main_btn_bck"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <!-- HOME -->
+        <!-- HOME -->
+        <Button
+            android:id="@+id/btn_home2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onHomeButtonClick"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/homyas"
+                android:layout_gravity="center"
+                android:contentDescription="Home Icon"/>
+
+            <TextView
+                android:id="@+id/btn_home_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- FAVORITE -->
+        <Button
+            android:id="@+id/btn_favorate2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onFavoriteButtonClick"
+            android:visibility="visible"
+            />
+
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/favort"
+                android:layout_gravity="center"
+                android:contentDescription="Favorite Icon"/>
+
+            <TextView
+                android:id="@+id/btn_favorate_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAVORITE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- HISTORY -->
+        <Button
+            android:id="@+id/btn_history2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onHomeButtonClick"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:foreground="@drawable/ripple_rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/histortry"
+                android:layout_gravity="center"
+                android:contentDescription="History Icon"/>
+
+            <TextView
+                android:id="@+id/btn_history_Text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HISTORY"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </GridLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeFavor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPanel"
+        android:background="#252020"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/textfavorate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAVORATE"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"></TextView>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/textfavorate"
+            android:src="@drawable/star"
+            android:layout_marginStart="30dp"></ImageView>
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/favorate_recyclerView"
+        android:layout_below="@+id/relativeFavor">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
